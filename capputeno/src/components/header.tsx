@@ -1,4 +1,4 @@
-'use client' //componente tem que ser renderizado pelo lado do cliente
+"use client"//componente tem que ser renderizado pelo lado do cliente
 import styled from "styled-components";
 import { PrimaryInputWSearchIcon } from './primaryInput';
 
