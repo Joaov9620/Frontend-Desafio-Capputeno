@@ -1,5 +1,5 @@
+import { CartIcon } from "@/assets/icons/cart-icon";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
-import { CartIcon } from "./cart-icon";
 import styled from "styled-components"
 
 const CartCount = styled.span`

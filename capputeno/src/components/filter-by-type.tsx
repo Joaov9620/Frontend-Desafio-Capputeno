@@ -42,7 +42,7 @@ export function FilterByType(){
         selected={type === FilterType.ALL} 
         onClick={() => handleChangeType(FilterType.ALL)}
       >
-          Todos os produtos
+        Todos os produtos
       </FilterItem>
       <FilterItem 
         selected={type === FilterType.SHIRT} 

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { SearchIcon } from "./search-icon";
+import { SearchIcon } from "@/assets/icons/search-icon";
 import { InputHTMLAttributes } from "react";
 
 const PrimaryInput = styled.input`
@@ -30,12 +30,15 @@ const InputContainer = styled.div`
 `;
 
 //para poder usar as propiedades de um input
-interface InputProps extends InputHTMLAttributes<HTMLInputElement>{}
+interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
+  value: string,
+  handleChange: (value:string) => void
+}
 
 export function PrimaryInputWSearchIcon(props: InputProps){
   return (
     <InputContainer>
-      <PrimaryInput {...props}/>
+      <PrimaryInput onChange={(e) => props.handleChange(e.target.value)} {...props}/>
       <SearchIcon/>
     </InputContainer>
   )
