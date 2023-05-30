@@ -81,6 +81,7 @@ const ProductInfo = styled.div`
     font-size: 20px;
     color: var(--shapes-dark);
     margin-bottom: 24px;
+    margin-top: 4px;
   }
 
   p{
@@ -113,7 +114,7 @@ export default function Product({searchParams}: {searchParams: {id: string}}){
   return (
     <DefaultPageLayout>
       <Container>
-        <BackBtn navigate="/"/>
+        <BackBtn/>
         <section>
           <img src={data?.image_url} alt="Imagem do produto"/>
           <div>

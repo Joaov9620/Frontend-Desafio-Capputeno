@@ -1,5 +1,4 @@
 import { BackIcon } from "@/assets/icons/back-icon";
-import { useRouter } from "next/navigation";
 import styled from "styled-components";
 
 export const Button = styled.button`
@@ -17,14 +16,9 @@ export const Button = styled.button`
   color: var(--secondary-text);
 `;
 
-interface BtnProps{
-  navigate: string;
-}
-
-export function BackBtn({navigate}: BtnProps){
-  const router = useRouter();
+export function BackBtn(){
   const handleNavigate = () => {
-    router.push(navigate)
+    window.history.back();
   }
   return (
     <Button onClick={handleNavigate}>
