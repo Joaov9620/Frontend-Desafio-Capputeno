@@ -14,11 +14,10 @@ export function getFieldByPriority(priority: PriorityTypes){
   return {field: "sales", order: "DSC"}
 }
 
-export const mountQuery = (type: FilterType, priority: PriorityTypes) => {
-    const pagePagination = 0 ; 
-
+export const mountQuery = (type: FilterType, priority: PriorityTypes, page: number) => {
+    const itemsPage = 9;
     if(type === FilterType.ALL && priority === PriorityTypes.POPULARITY) return `query {
-      allProducts(page: ${pagePagination}, perPage: 9, sortField: "sales", sortOrder: "DSC") 
+      allProducts(page: ${page}, perPage: ${itemsPage}, sortField: "sales", sortOrder: "DSC") 
         {
           id
           name
@@ -29,9 +28,10 @@ export const mountQuery = (type: FilterType, priority: PriorityTypes) => {
     `
     const sortSettings = getFieldByPriority(priority)
     const categoryFilter = getCategoryByType(type)
+
     return `
     query {
-        allProducts(page: ${pagePagination}, perPage: 9, sortField: "${sortSettings.field}", sortOrder: "${sortSettings.order}", ${categoryFilter ? `filter: { category: "${categoryFilter}"}`: ''}) {
+        allProducts(page: ${page}, perPage: ${itemsPage}, sortField: "${sortSettings.field}", sortOrder: "${sortSettings.order}", ${categoryFilter ? `filter: { category: "${categoryFilter}"}`: ''}) {
           id
           name
           price_in_cents

@@ -1,7 +1,7 @@
 import { formatPrice } from "@/utils/format-price";
 import { useRouter } from "next/navigation";
 import styled from "styled-components"
-import { Divider } from "./divider";
+import { Divider } from "../divider";
 
 interface ProductCardProps{
   image: string,

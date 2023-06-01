@@ -1,7 +1,4 @@
-/** 1- Verificar se tem pagina anterior 
- *  2-
-*/
-
+import { useFilter } from "@/hooks/useFilter";
 import styled from "styled-components"
 
 interface PaginationProps{
@@ -51,18 +48,62 @@ const ButtonSelect = styled.button<PaginationProps>`
 `;
 
 export function Pagination(){
+  const {page, setPage} = useFilter();
+
+  const handleChangePage = (value: number) => {
+    setPage(value);
+  }
+
+  const handlePreviousPage = () => {
+    if (page > 0) {
+      setPage(page - 1);
+    }
+  }
+
+  const handleNextPage = () => {
+    if (page < 4) {
+      setPage(page + 1);
+    }
+  }
+
+
   return (
     <PaginationNav>
       <ul>
-        <li><ButtonSelect selected>1</ButtonSelect></li>
-        <li><ButtonSelect selected={false}>2</ButtonSelect></li>
-        <li><ButtonSelect selected={false}>3</ButtonSelect></li>
-        <li><ButtonSelect selected={false}>4</ButtonSelect></li>
-        <li><ButtonSelect selected={false}>5</ButtonSelect></li>
+        <li>
+          <ButtonSelect 
+            selected={page === 0} 
+            onClick={() => handleChangePage(0)}
+          >1
+          </ButtonSelect></li>
+          <li>
+          <ButtonSelect 
+            selected={page === 1} 
+            onClick={() => handleChangePage(1)}
+          >2
+          </ButtonSelect></li>
+          <li>
+          <ButtonSelect 
+            selected={page === 2} 
+            onClick={() => handleChangePage(2)}
+          >3
+          </ButtonSelect></li>
+          <li>
+          <ButtonSelect 
+            selected={page === 3} 
+            onClick={() => handleChangePage(3)}
+          >4
+          </ButtonSelect></li>
+          <li>
+          <ButtonSelect 
+            selected={page === 4} 
+            onClick={() => handleChangePage(4)}
+          >5
+          </ButtonSelect></li>
       </ul>
       <div>
-        <ButtonSelect selected={false}>&lt;</ButtonSelect>
-        <ButtonSelect selected={false}>&gt;</ButtonSelect>
+        <ButtonSelect selected={false} onClick={handlePreviousPage}>&lt;</ButtonSelect>
+        <ButtonSelect selected={false} onClick={handleNextPage}>&gt;</ButtonSelect>
       </div>
   </PaginationNav>
   )
