@@ -33,7 +33,6 @@ const PaginationNav =  styled.nav`
 const ButtonSelect = styled.button<PaginationProps>`
   width: 32px;
   height: 32px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
