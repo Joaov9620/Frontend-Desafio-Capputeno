@@ -1,18 +1,8 @@
-![image](https://user-images.githubusercontent.com/40845824/121069742-3accdb00-c7a4-11eb-87d0-3dc47e433762.png)
-
-
 # 🚀 Front end challenge
 
 Bem-vindo(a). Este é o desafio Front end!
 
-O objetivo deste desafio é avaliar suas habilidades de programação.
-Quando sua solução estiver pronta, basta responder o e-mail que recebeu com o link do seu repo aqui no Github!
-Em seguida, enviaremos o feedback e as instruções dos próximos passos!
-
-Caso tenha alguma dúvida, nós estamos disponíveis no email *recrutamento@rocketseat.com.br*
-Bom desafio!
-
-> ⚠️ **É importante que o seu repo esteja público, caso contrário não iremos conseguir avaliar sua resposta**
+O objetivo deste desafio é desenvolver uma aplicação frontend para avaliação de habilidades.
 
 # 🧠 Contexto
 
@@ -50,13 +40,47 @@ Além dos requisitos levantados acima, iremos olhar para os seguintes critérios
 - Padrões de código
 - Padrão de commits (_Conventional_)
 
-## 😎 Seria legal
-- Fazer deploy na vercel ou em outro local de sua preferência e disponibilizar um link de visualização, se necessário utilize esse servidor para a API GraphQL:  https://rocketseat-frontend-challenge.herokuapp.com/
-- Testes unitários
-- Utilização de cache do Next.js
+## 🖥️ Installation
 
----
+### Frontend
 
-_O desafio acima foi cuidadosamente construído para propósitos de avaliação apenas. Já possuimos uma funcionalidade similar na nossa plataforma._
+1. Clone o repositório
+```bash
+git clone https://github.com/Joaov9620/Frontend-Desafio-Capputeno.git
+```
 
-Made with 💜 at Rocketseat
+2. Vá para a pasta do projeto
+```bash
+cd frontend-challenge
+cd capputeeno
+```
+
+3. Instale as dependências
+```bash
+npm install
+```
+
+3. Execute o front -end
+```bash
+npm run dev
+```
+
+### Executando a API
+
+
+2. Vá para a pasta API
+
+```bash
+cd challenge-frontend
+cd api
+```
+
+3. Instale as dependências
+```bash
+npm install
+```
+
+3. Run start
+```bash
+npm start
+```
