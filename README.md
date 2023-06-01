@@ -71,7 +71,7 @@ npm run dev
 2. Vá para a pasta API
 
 ```bash
-cd challenge-frontend
+cd frontend-challenge
 cd api
 ```
 
