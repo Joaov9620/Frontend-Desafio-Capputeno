@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { ArrowIcon } from "@/assets/icons/arraow-icon";
+import { ArrowIcon } from "@/components/icons/arraow-icon";
 import { useState } from "react";
 import { useFilter } from "@/hooks/useFilter";
 import { PriorityTypes } from "@/types/priority-types";
@@ -26,6 +26,12 @@ const FilterContainer = styled.div`
 
     svg{
       margin-left: 16px;
+    }
+
+    transition: filter 0.2s;
+        
+    :hover{
+      filter: brightness(0.9);
     }
   }
 `;

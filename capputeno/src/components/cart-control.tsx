@@ -1,5 +1,6 @@
-import { CartIcon } from "@/assets/icons/cart-icon";
+import { CartIcon } from "@/components/icons/cart-icon";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { useRouter } from "next/navigation";
 import styled from "styled-components"
 
 const CartCount = styled.span`
@@ -15,14 +16,22 @@ const CartCount = styled.span`
   margin-left: -10px;
 `;
 
-const Container = styled.div`
+const Container = styled.button`
   position: relative;
+  border: none;
+  background-color: transparent;
 `;
 
 export function CartControl(){
+  const router = useRouter();
   const {value} = useLocalStorage('cart-items', [])
+
+  const handleNavigateToCart = () =>{
+    router.push("/cart");
+  }
+
   return (
-    <Container>
+    <Container onClick={handleNavigateToCart}>
       <CartIcon/>
       {value.length > 0 && <CartCount>{value.length}</CartCount>}
     </Container>

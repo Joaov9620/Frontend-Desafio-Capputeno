@@ -1,5 +1,5 @@
 'use client'
-import { ShoppingBagIcon } from "@/assets/icons/shopping-bag-icon";
+import { ShoppingBagIcon } from "@/components/icons/shopping-bag-icon";
 import { BackBtn } from "@/components/back-button";
 import { DefaultPageLayout } from "@/components/default-page-layout";
 import { useProduct } from "@/hooks/useProduct";
@@ -50,6 +50,12 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
         gap: 8px;
+
+        transition: filter 0.2s;
+        
+        :hover{
+          filter: brightness(0.9);
+        }
       }
     }
   }

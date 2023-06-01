@@ -1,4 +1,4 @@
-import { BackIcon } from "@/assets/icons/back-icon";
+import { BackIcon } from "@/components/icons/back-icon";
 import styled from "styled-components";
 
 export const Button = styled.button`
@@ -14,6 +14,12 @@ export const Button = styled.button`
   font-size: 14px;
   line-height: 150%;
   color: var(--secondary-text);
+
+  transition: filter 0.2s;
+        
+  :hover{
+    filter: brightness(0.9);
+  }
 `;
 
 export function BackBtn(){
