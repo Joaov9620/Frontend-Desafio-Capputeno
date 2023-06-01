@@ -1,6 +1,7 @@
 "use client"
 import { DefaultPageLayout } from '@/components/default-page-layout';
 import { FilterBar } from '@/components/filter-bar'
+import { Pagination } from '@/components/pagination';
 import { ProductsLists } from '@/components/products-list'
 import styled from 'styled-components';
 
@@ -18,6 +19,7 @@ export default function Home() {
         <FilterBar/>
         <ProductsLists/>
       </PageWrapper>
+      <Pagination/>
     </DefaultPageLayout>
   )
 }
